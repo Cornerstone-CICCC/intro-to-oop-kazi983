@@ -1,26 +1,26 @@
-// Create a new task by adding to the arrays
+// Task object
 // A new task will be created as incomplete
 class Task {
   title;
   description;
-  complete = false;
+  isComplete = false;
 
   constructor(title, description) {
     this.title = title;
     this.description = description;
   }
 
-  // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
-  markCompleted = function (task) {
-    this.complete = true;
-  };
+  // Mark a task as complete by setting the task's status
+  markCompleted() {
+    this.isComplete = true;
+  }
 
   // Print the state of a task to the console in a nice readable way
-  logState = function (task) {
+  logState() {
     console.log(
-      `${this.title} has${this.complete ? ' ' : ' not '}been completed`,
+      `${this.title} has${this.isComplete ? ' ' : ' not '}been completed`,
     );
-  };
+  }
 }
 
 // DRIVER CODE BELOW
