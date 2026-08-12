@@ -23,8 +23,11 @@ const task1 = newTask(
 );
 const task2 = newTask('Do Laundry', '😨');
 const tasks = [task1, task2];
-// for now, let's just make sure we see our tasks
+logTaskState(task1); // Clean Cat Litter has not been completed
+completeTask(task1);
+logTaskState(task1); // Clean Cat Litter has been completed
 console.log(tasks);
+
 /* 
 newTask("Clean Cat Litter"); // task 0
 newTask("Do Laundry"); // task 1
